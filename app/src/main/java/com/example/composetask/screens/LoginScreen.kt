@@ -41,12 +41,12 @@ fun LoginScreen(onClick: (email:String) -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
 ) {
 
-        Image(painter = painterResource(id = R.drawable.account), contentDescription = "image", modifier = Modifier.size(150.dp))
+        Image(painter = painterResource(id = R.drawable.logo), contentDescription = "image", modifier = Modifier.size(150.dp))
         Spacer(modifier = Modifier.height(8.dp))
-        Text(text = "Welcome Back", fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(text = "Login to your account")
+        Text(text = "Welcome", fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Login")
         Spacer(modifier = Modifier.height(16.dp))
-        OutlinedTextField(value = email, onValueChange = {email=it}, label = { Text(text = "Email Address")})
+        OutlinedTextField(value = email, onValueChange = {email=it}, label = { Text(text = "Email")})
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(value = password, onValueChange = {password=it}, label = { Text(text = "Password")},
             visualTransformation = PasswordVisualTransformation())
@@ -59,7 +59,6 @@ fun LoginScreen(onClick: (email:String) -> Unit) {
             onClick(email)
         }) {
             Text(text = "Login")
-
         }
 
     }
